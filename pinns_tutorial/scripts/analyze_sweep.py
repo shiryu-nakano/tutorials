@@ -26,13 +26,13 @@ than guessing.
 import glob
 import json
 import os
+from pathlib import Path
 
 import numpy as np
 import matplotlib.pyplot as plt
-
-RESULTS_DIR = "/mnt/user-data/outputs/sweep_results"
-
-
+    
+REPO_ROOT = Path(__file__).resolve().parents[1]
+RESULTS_DIR = REPO_ROOT / "results" / "sweep_results"
 def moving_average(a, window):
     if window <= 1:
         return a.copy()

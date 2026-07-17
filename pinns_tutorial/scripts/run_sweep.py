@@ -18,10 +18,13 @@ grid size for a quick smoke test first if needed.
 
 from pinn_heat_lib import train_pinn
 
+from pathlib import Path
+
 SEEDS = [0, 1, 2, 3, 4]
 DATA_WEIGHTS = [1.0, 3.0, 10.0, 30.0, 100.0]
 N_EPOCHS = 3000
-OUT_DIR = "/mnt/user-data/outputs/sweep_results"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+OUT_DIR = REPO_ROOT / "results" / "sweep_results"
 
 total = len(SEEDS) * len(DATA_WEIGHTS)
 count = 0

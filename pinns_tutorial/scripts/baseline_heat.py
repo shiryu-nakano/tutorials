@@ -20,6 +20,11 @@ thing a PINN also has to discover.
 
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
+REPO_ROOT = Path(__file__).resolve().parents[1]
+FIGURES_DIR = REPO_ROOT / "figures"
+FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+
 
 # ---- parameters ----
 alpha = 1.0          # thermal diffusivity
@@ -81,7 +86,7 @@ ax.set_ylabel("u(x, t)")
 ax.set_title("Heat equation: sin wave decaying (dots=FD, lines=exact)")
 ax.legend(fontsize=8)
 fig.tight_layout()
-fig.savefig("/mnt/user-data/outputs/heat_snapshots.png", dpi=130)
+fig.savefig(FIGURES_DIR / "heat_snapshots.png", dpi=130)
 
 # ---- figure 2: space-time heatmap ----
 fig2, ax2 = plt.subplots(figsize=(7, 4.5))
@@ -94,6 +99,6 @@ ax2.set_ylabel("x")
 ax2.set_title("u(x, t): heat spreading and decaying over time")
 fig2.colorbar(im, ax=ax2, label="temperature u")
 fig2.tight_layout()
-fig2.savefig("/mnt/user-data/outputs/heat_heatmap.png", dpi=130)
+fig2.savefig(FIGURES_DIR / "heat_heatmap.png", dpi=130)
 
 print("saved: heat_snapshots.png, heat_heatmap.png")

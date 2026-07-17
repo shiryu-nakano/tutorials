@@ -13,11 +13,13 @@ sweep of many runs doesn't produce 25 redundant figures.
 
 import json
 import os
+from pathlib import Path
 
 import numpy as np
 import torch
 import torch.nn as nn
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CONFIG = dict(
     # physics
     alpha=1.0,
@@ -41,7 +43,7 @@ DEFAULT_CONFIG = dict(
     # bookkeeping
     seed=0,
     run_id="default",
-    out_dir="/mnt/user-data/outputs/sweep_results",
+    out_dir=str(REPO_ROOT / "results" / "sweep_results"),
     save_final_checkpoint=False,  # set True if you'll want LLC/SGLD later
 )
 
