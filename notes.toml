@@ -6,6 +6,7 @@
 
 [[doc]]
 id = "SLT1"
+topic = "SLT"
 title = "Singular Learning Theory 1"
 path = "singular_learning_theory/lecture_note/singular_learning_theory_1.tex"
 kind = "note"
@@ -13,6 +14,7 @@ status = "draft"
 
 [[doc]]
 id = "SLT-CP1"
+topic = "SLT"
 title = "特異学習理論入門"
 path = "singular_learning_theory/01/cp1.tex"
 kind = "slides"
