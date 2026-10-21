@@ -1,5 +1,8 @@
 # tutorials
-勉強したことのまとめ.テキストとしてまとめたものは公開している．
+勉強したことのまとめ.テキストとしてまとめたものは公
+開している．
+
+公開先：https://shiryu-nakano.github.io/tutorials/
 
 - [関連|miniexperiments](https://github.com/shiryu-nakano/miniexperiments)
 
