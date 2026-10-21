@@ -1,15 +1,43 @@
+# OS・エディタ
+.DS_Store
+.claude/
+
+# LaTeX の中間ファイル
 *.aux
 *.fdb_latexmk
 *.fls
 *.log
 *.out
 *.toc
+*.nav
+*.snm
+*.synctex.gz
+**/build/
 
-*.gz
-.DS_Store
+# LaTeX でコンパイルした PDF（公開用は GitHub Actions が作成する）
+**/lecture_note/*.pdf
+**/slides/*.pdf
+**/notes/*.pdf
+singular_learning_theory/01/*.pdf
+linear_algebra/topic-wise-notes/*.pdf
 
+# 教科書・論文などの著作物
+**/text/
 
-./sin
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 実験の生データ・チェックポイント（再計算できるもの）
+**/results/checkpoints/
+**/results/**/*.npz
+*.pt
+
+# 公開用の作業ディレクトリ
+_site/
+_pdf/
 
 tensorflow_tutorial/__pycache__/
 tensorflow_tutorial/tensorflow_datasets/
