@@ -1,0 +1,33 @@
+# 公開する LaTeX の文書の一覧
+# id    : 公開ページでの PDF のファイル名（ノートの略号を兼ねる）
+# path  : リポジトリの最上位から見た .tex の場所
+# kind  : note（ノート）または slides（スライド）
+# status: draft / incomplete / revised など
+
+[[doc]]
+id = "SLT1"
+title = "Singular Learning Theory 1"
+path = "singular_learning_theory/lecture_note/singular_learning_theory_1.tex"
+kind = "note"
+status = "draft"
+
+[[doc]]
+id = "SLT-CP1"
+title = "特異学習理論入門"
+path = "singular_learning_theory/01/cp1.tex"
+kind = "slides"
+status = "draft"
+
+[[doc]]
+id = "SLT-POST"
+title = "事後分布の例：混合正規分布モデル"
+path = "singular_learning_theory/01/posterior.tex"
+kind = "slides"
+status = "draft"
+
+[[doc]]
+id = "EIG"
+title = "固有値と固有ベクトル"
+path = "linear_algebra/topic-wise-notes/eigen-value-vector.tex"
+kind = "note"
+status = "draft"

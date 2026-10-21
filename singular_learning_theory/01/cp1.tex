@@ -24,19 +24,16 @@
   \tableofcontents
 \end{frame}
 
-\section{導入}
+\section{ベイズ推測の導入}
 
-\begin{frame}{動機}
-  特異モデルでは Fisher 情報行列が退化するため、
-  古典的な漸近論が成り立たない。
-  \[
-    \mathrm{KL}(q \,\|\, p_w) = O(\lVert w - w_0 \rVert^{2})
-  \]
-  が一般には成立しない点が出発点。
+\begin{frame}{問題設定}
+  N次元ユークリッド空間に${n}$個の点があるとする．
+  $$x_i\in \mathbf{R}^{N}, (i = 1,2,...,n)$$
+  これを以下のように書いて，*サンプル*と呼ぶ．
+  $$x^n = (x_1,x_2,...,x_n) \in \mathbf{R}^{N} \dots \mathbf{R}^{N}$$
 \end{frame}
 
-\begin{frame}{用語}
-  本資料で用いる主な記号：
+\begin{frame}{道具立て}
   \begin{itemize}
     \item $q(x)$ : 真の分布
     \item $p(x \mid w)$ : 統計モデル（パラメータ $w \in W$）
@@ -44,15 +41,13 @@
   \end{itemize}
 \end{frame}
 
-\section{実対数閾値}
-
-\begin{frame}{定義}
-  ゼータ関数
-  \[
-    \zeta(z) = \int_W \mathrm{KL}(q \,\|\, p_w)^{z}\, \varphi(w)\, dw
-  \]
-  の最大極を $-\lambda$ とおき、$\lambda$ を実対数閾値と呼ぶ。
+\begin{frame}{道具立て}
+  \begin{itemize}
+    \item $p(w|X^n)$ : 事後分布
+    \item $p(w|X^n) := \frac{\varphi(w)\prod_{i=1}^{N}p(x_i \mid w)}{Z_n(\beta)}$
+  \end{itemize}
 \end{frame}
+
 
 \section{図の例}
 
@@ -71,6 +66,24 @@
     \item 特異モデルでは古典的漸近論が破綻
     \item 実対数閾値 $\lambda$ が汎化誤差の主要項を決める
   \end{itemize}
+\end{frame}
+
+\section{テスト}
+\begin{frame}{図と説明}
+  \begin{columns}[T]                       % T = 上揃え
+    \begin{column}{0.55\textwidth}         % 左カラム 55%
+      \includegraphics[width=\linewidth,
+        height=0.75\textheight,keepaspectratio]{figures/fig_1_1.png}
+    \end{column}
+    \begin{column}{0.45\textwidth}         % 右カラム 45%
+      \textbf{読み取れること}
+      \begin{itemize}
+        \item 当たり 2〜3 回が最頻
+        \item 分布はほぼ対称
+        \item 0 回・5 回は約 3\%
+      \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \end{document}

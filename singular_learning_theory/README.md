@@ -24,5 +24,3 @@
 
 
 ![alt text](figures/image.png)
-
-https://gemini.google.com/app/7fb085b45abd287e?hl=ja
