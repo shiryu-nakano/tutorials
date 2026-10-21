@@ -15,4 +15,6 @@
   "log_every": 20,
   "seed": 0,
   "run_id": "seed0_dw1",
-  "out_dir": 
+  "out_dir": "/Users/nkn4ryu/ghq/github.com/shiryu-nakano/DeepLearning_tutorial/pinns_tutorial/results/sweep_results",
+  "save_final_checkpoint": false
+}

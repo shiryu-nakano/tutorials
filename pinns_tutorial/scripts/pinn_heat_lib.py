@@ -68,6 +68,7 @@ def exact_solution(x, t, alpha):
 
 def train_pinn(config=None, device=None, verbose=True):
     cfg = {**DEFAULT_CONFIG, **(config or {})}
+    cfg["out_dir"] = str(cfg["out_dir"]) 
 
     torch.manual_seed(cfg["seed"])
     np.random.seed(cfg["seed"])

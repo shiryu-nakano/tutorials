@@ -1,0 +1,20 @@
+{
+  "alpha": 1.0,
+  "L": 1.0,
+  "T": 0.2,
+  "width": 32,
+  "depth": 4,
+  "n_pde": 2000,
+  "n_ic": 200,
+  "n_bc": 200,
+  "w_ic": 100.0,
+  "w_bc": 100.0,
+  "w_pde": 1.0,
+  "lr": 0.001,
+  "n_epochs": 3000,
+  "log_every": 20,
+  "seed": 4,
+  "run_id": "seed4_dw100",
+  "out_dir": "/Users/nkn4ryu/ghq/github.com/shiryu-nakano/DeepLearning_tutorial/pinns_tutorial/results/sweep_results",
+  "save_final_checkpoint": false
+}
