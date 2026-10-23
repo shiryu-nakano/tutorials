@@ -41,3 +41,4 @@ _pdf/
 
 tensorflow_tutorial/__pycache__/
 tensorflow_tutorial/tensorflow_datasets/
+data_science_turorial/datasets/openml/
